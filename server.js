@@ -1,17 +1,18 @@
 const express = require('express')
 
-const server = express()
+const server = express();
+const PORT = 3000;
 
-// server.set('views', './src/views');
+server.set('views', './src/views');
 
-// server.set('view engine', 'express');
+server.set('view engine', 'ejs');
 
 server.get("/", (req, res) => {
-        res.send("/", "welcome to my to do list app");
+        res.send(index.js);
       });
 
-let PORT = 3000;
+
 
 server.listen(PORT, () => {
-    console.log("Listening on", PORT);
+    console.log(`Listening on, ${PORT}`);
   });
