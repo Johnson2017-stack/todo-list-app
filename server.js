@@ -4,12 +4,8 @@ const PORT = 3000;
 
 server.use(express.static("public"));
 
-server.set('views', './src/views');
-
-server.set('view engine', 'ejs');
-
 server.get("/", (req, res) => {
-        res.render('index');
+        res.send('public', 'index.html');
       });
 
 server.listen(PORT, () => {
